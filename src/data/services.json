@@ -1,0 +1,114 @@
+{
+  "pageTitle": "Dịch vụ của chúng tôi",
+  "pageDescription": "Giải pháp marketing toàn diện từ thiết kế website đến quảng cáo đa kênh, giúp doanh nghiệp của bạn phát triển bền vững",
+  "services": [
+    {
+      "id": "thiet-ke-website",
+      "icon": "Code",
+      "category": "web",
+      "title": "Thiết kế Website",
+      "shortDesc": "Website đẹp, chuẩn SEO, tốc độ nhanh",
+      "description": "Thiết kế website chuyên nghiệp, giao diện hiện đại, chuẩn SEO, tốc độ tải nhanh, bảo mật cao. Sử dụng WordPress & Next.js, UI/UX tối ưu chuyển đổi, responsive mọi thiết bị.",
+      "features": ["Giao diện đẹp mắt, hiện đại", "Chuẩn SEO, tốc độ nhanh", "Bảo mật cao, an toàn", "Dễ quản trị với WordPress", "UI/UX tối ưu chuyển đổi", "Responsive mọi thiết bị"],
+      "stats": [{ "value": "200+", "label": "Website đã bàn giao" }, { "value": "98%", "label": "Khách hàng hài lòng" }],
+      "process": [
+        { "step": "01", "title": "Khảo sát & Phân tích", "desc": "Trao đổi nhu cầu, nghiên cứu đối thủ, xác định mục tiêu và lên concept thiết kế" },
+        { "step": "02", "title": "Wireframe & UI/UX", "desc": "Xây dựng wireframe, thiết kế giao diện hiện đại, tối ưu trải nghiệm người dùng" },
+        { "step": "03", "title": "Phát triển & Testing", "desc": "Lập trình, tích hợp CMS, kiểm thử đa thiết bị và tối ưu tốc độ tải trang" },
+        { "step": "04", "title": "Bàn giao & Hỗ trợ", "desc": "Bàn giao toàn bộ source code, hướng dẫn quản trị và hỗ trợ kỹ thuật sau bàn giao" }
+      ],
+      "gradient": "from-blue-500 to-cyan-500",
+      "image": "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGV2ZWxvcG1lbnQlMjBjb2Rpbmd8ZW58MXx8fHwxNzcyNTUzNTA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": "google-ads",
+      "icon": "Megaphone",
+      "category": "ads",
+      "title": "Google Ads",
+      "shortDesc": "Quảng cáo Google hiệu quả, ROI cao",
+      "description": "Chiến dịch quảng cáo Google chuyên nghiệp, tối ưu chi phí, tăng chuyển đổi. Nghiên cứu từ khóa chuyên sâu, targeting chính xác, theo dõi và tối ưu liên tục để đạt ROI tối đa.",
+      "features": ["Nghiên cứu từ khóa chuyên sâu", "Targeting khách hàng chính xác", "Tối ưu chi phí quảng cáo", "Theo dõi và báo cáo chi tiết", "A/B testing liên tục", "ROI cao, hiệu quả đo lường"],
+      "stats": [{ "value": "150%", "label": "ROI trung bình" }, { "value": "5x", "label": "Tăng trưởng chuyển đổi" }],
+      "process": [
+        { "step": "01", "title": "Research & Audit", "desc": "Nghiên cứu từ khóa, phân tích đối thủ, audit tài khoản hiện tại và xác định cơ hội" },
+        { "step": "02", "title": "Thiết lập chiến dịch", "desc": "Cấu trúc campaign khoa học, viết ad copy hấp dẫn, cài đặt tracking chuyển đổi" },
+        { "step": "03", "title": "Tối ưu & A/B Test", "desc": "Theo dõi hiệu suất hàng ngày, tối ưu bid, loại trừ từ khóa không hiệu quả" },
+        { "step": "04", "title": "Báo cáo & Scale", "desc": "Báo cáo kết quả định kỳ, tư vấn mở rộng ngân sách và chiến lược tăng trưởng" }
+      ],
+      "gradient": "from-green-500 to-emerald-500",
+      "image": "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc3MjU4OTI0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": "tiktok-ads",
+      "icon": "Smartphone",
+      "category": "ads",
+      "title": "TikTok Ads",
+      "shortDesc": "Quảng cáo TikTok sáng tạo, viral nhanh",
+      "description": "Quảng cáo TikTok chuyên nghiệp, nội dung sáng tạo, tiếp cận Gen Z hiệu quả. Chiến lược video viral, targeting chính xác, tăng nhận diện thương hiệu và doanh số nhanh chóng.",
+      "features": ["Nội dung video sáng tạo", "Targeting Gen Z hiệu quả", "Chiến lược viral content", "Tương tác cao, lan tỏa nhanh", "Tăng nhận diện thương hiệu", "Phù hợp thương mại điện tử"],
+      "stats": [{ "value": "10M+", "label": "Tổng lượt xem" }, { "value": "3x", "label": "Tăng brand awareness" }],
+      "process": [
+        { "step": "01", "title": "Phân tích & Trend", "desc": "Nghiên cứu đối tượng mục tiêu, xu hướng nội dung và competitor trên TikTok" },
+        { "step": "02", "title": "Sản xuất Creative", "desc": "Lên concept video, sản xuất nội dung sáng tạo thu hút ngay từ giây đầu tiên" },
+        { "step": "03", "title": "Triển khai chiến dịch", "desc": "Setup campaign, cài đặt Pixel, targeting chi tiết theo hành vi và sở thích" },
+        { "step": "04", "title": "Tối ưu & Scale", "desc": "Phân tích hook rate, watch rate, tối ưu creative và nhân rộng chiến dịch hiệu quả" }
+      ],
+      "gradient": "from-purple-500 to-pink-500",
+      "image": "https://images.unsplash.com/photo-1640725804478-ebf80960a3f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMG1hcmtldGluZyUyMGNvbnRlbnR8ZW58MXx8fHwxNzcyNTU3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": "facebook-ads",
+      "icon": "Target",
+      "category": "ads",
+      "title": "Facebook Ads",
+      "shortDesc": "Chạy ads Facebook chuyên nghiệp",
+      "description": "Quảng cáo Facebook & Instagram chuyên nghiệp, targeting chính xác theo hành vi và nhân khẩu học. Tối ưu chi phí, tăng chuyển đổi, mở rộng thị trường hiệu quả với remarketing thông minh.",
+      "features": ["Targeting khách hàng chi tiết", "Nội dung quảng cáo hấp dẫn", "Tối ưu chi phí & chuyển đổi", "Remarketing hiệu quả", "Phân tích đối tượng chi tiết", "Mở rộng thị trường nhanh"],
+      "stats": [{ "value": "40%", "label": "Giảm chi phí/chuyển đổi" }, { "value": "8x", "label": "ROAS trung bình" }],
+      "process": [
+        { "step": "01", "title": "Nghiên cứu đối tượng", "desc": "Xây dựng Buyer Persona, phân tích audience insights và research đối thủ cạnh tranh" },
+        { "step": "02", "title": "Xây dựng Creative", "desc": "Thiết kế creative đa format, viết copy thu hút và xây dựng landing page tối ưu" },
+        { "step": "03", "title": "Chạy thử & Tối ưu", "desc": "A/B test creative, audience, placement và tối ưu liên tục theo dữ liệu thực tế" },
+        { "step": "04", "title": "Scale & Remarketing", "desc": "Mở rộng ngân sách chiến dịch hiệu quả, xây dựng phễu remarketing đa tầng" }
+      ],
+      "gradient": "from-blue-600 to-indigo-600",
+      "image": "https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzI1NDAzOTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": "branding",
+      "icon": "Palette",
+      "category": "brand",
+      "title": "Branding",
+      "shortDesc": "Xây dựng thương hiệu mạnh mẽ",
+      "description": "Xây dựng thương hiệu chuyên nghiệp từ A-Z, nhận diện thương hiệu độc đáo, chiến lược brand positioning rõ ràng. Logo, bộ nhận diện thương hiệu và brand guideline hoàn chỉnh.",
+      "features": ["Nghiên cứu thị trường & đối thủ", "Định vị thương hiệu rõ ràng", "Thiết kế logo & bộ nhận diện", "Brand guideline hoàn chỉnh", "Tone & manner nhất quán", "Storytelling thương hiệu"],
+      "stats": [{ "value": "80+", "label": "Thương hiệu đã xây dựng" }, { "value": "100%", "label": "Bàn giao đúng hạn" }],
+      "process": [
+        { "step": "01", "title": "Nghiên cứu thị trường", "desc": "Phân tích thị trường, đối thủ cạnh tranh, xu hướng ngành và insight khách hàng mục tiêu" },
+        { "step": "02", "title": "Định vị & Chiến lược", "desc": "Xác định brand positioning, giá trị cốt lõi, tính cách thương hiệu và câu chuyện thương hiệu" },
+        { "step": "03", "title": "Thiết kế nhận diện", "desc": "Thiết kế logo, color palette, typography, và toàn bộ bộ nhận diện thương hiệu" },
+        { "step": "04", "title": "Brand Guideline", "desc": "Hoàn thiện brand book, hướng dẫn ứng dụng và hỗ trợ triển khai trên tất cả kênh" }
+      ],
+      "gradient": "from-orange-500 to-red-500",
+      "image": "https://images.unsplash.com/photo-1666698809123-44e998e93f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdlYiUyMGRlc2lnbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzI1OTI2ODB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": "tu-dong-hoa",
+      "icon": "Zap",
+      "category": "automation",
+      "title": "Tự động hóa Marketing",
+      "shortDesc": "Tự động hóa quy trình marketing",
+      "description": "Tự động hóa toàn bộ quy trình marketing, tiết kiệm thời gian & chi phí vận hành. Email marketing, chatbot AI, CRM automation và workflow tự động cho mọi điểm chạm khách hàng.",
+      "features": ["Email marketing tự động", "Chatbot chăm sóc khách hàng", "CRM automation", "Lead nurturing tự động", "Báo cáo & phân tích chi tiết", "Tiết kiệm thời gian & chi phí"],
+      "stats": [{ "value": "70%", "label": "Tiết kiệm thời gian" }, { "value": "3x", "label": "Tăng tốc độ phản hồi" }],
+      "process": [
+        { "step": "01", "title": "Phân tích quy trình", "desc": "Audit quy trình marketing hiện tại, xác định bottleneck và cơ hội tự động hóa" },
+        { "step": "02", "title": "Lên kế hoạch", "desc": "Thiết kế customer journey map, xây dựng workflow automation và chọn công cụ phù hợp" },
+        { "step": "03", "title": "Tích hợp & Triển khai", "desc": "Cài đặt các công cụ automation, tích hợp CRM, email platform và các kênh marketing" },
+        { "step": "04", "title": "Đào tạo & Vận hành", "desc": "Đào tạo đội ngũ sử dụng, theo dõi hiệu suất và tối ưu liên tục các automation workflow" }
+      ],
+      "gradient": "from-yellow-500 to-amber-500",
+      "image": "https://images.unsplash.com/photo-1505209487757-5114235191e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjB3b3Jrc3BhY2UlMjBtaW5pbWFsJTIwZGVza3xlbnwxfHx8fDE3NzI1OTczMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    }
+  ]
+}

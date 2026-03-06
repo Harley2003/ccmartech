@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "titleLine1": "Giải pháp Marketing",
+    "titleLine2": "cho Doanh nghiệp",
+    "description": "Thiết kế, sáng tạo – chất lượng – hiệu quả. Chúng tôi mang đến giải pháp marketing tổng thể cho sự phát triển bền vững.",
+    "ctaPrimary": "Liên hệ ngay",
+    "ctaSecondary": "Khám phá dịch vụ",
+    "backgroundImage": "https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzI1NDAzOTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+  },
+  "featuredServices": [
+    {
+      "icon": "Code",
+      "title": "Thiết kế Website",
+      "description": "Website đẹp, chuẩn SEO, tốc độ nhanh, bảo mật cao. UI/UX tối ưu chuyển đổi.",
+      "link": "/dich-vu/thiet-ke-website",
+      "gradient": "from-blue-500 to-cyan-500"
+    },
+    {
+      "icon": "Megaphone",
+      "title": "Google Ads",
+      "description": "Chiến dịch quảng cáo Google hiệu quả, tối ưu chi phí, tăng chuyển đổi.",
+      "link": "/dich-vu/google-ads",
+      "gradient": "from-green-500 to-emerald-500"
+    },
+    {
+      "icon": "Smartphone",
+      "title": "TikTok Ads",
+      "description": "Quảng cáo TikTok sáng tạo, tiếp cận Gen Z, viral nhanh chóng.",
+      "link": "/dich-vu/tiktok-ads",
+      "gradient": "from-purple-500 to-pink-500"
+    },
+    {
+      "icon": "Target",
+      "title": "Facebook Ads",
+      "description": "Chạy ads Facebook chuyên nghiệp, targeting chính xác, ROI cao.",
+      "link": "/dich-vu/facebook-ads",
+      "gradient": "from-blue-600 to-indigo-600"
+    },
+    {
+      "icon": "Palette",
+      "title": "Branding",
+      "description": "Xây dựng thương hiệu mạnh mẽ, nhận diện thương hiệu độc đáo.",
+      "link": "/dich-vu/branding",
+      "gradient": "from-orange-500 to-red-500"
+    },
+    {
+      "icon": "Zap",
+      "title": "Tự động hóa",
+      "description": "Tự động hóa marketing, tiết kiệm thời gian, tăng hiệu quả.",
+      "link": "/dich-vu/tu-dong-hoa",
+      "gradient": "from-yellow-500 to-amber-500"
+    }
+  ],
+  "portfolioItems": [
+    {
+      "title": "Website Thương mại Điện tử",
+      "category": "E-commerce",
+      "image": "https://images.unsplash.com/photo-1505209487757-5114235191e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjB3b3Jrc3BhY2UlMjBtaW5pbWFsJTIwZGVza3xlbnwxfHx8fDE3NzI1OTczMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Thiết kế website bán hàng hiện đại"
+    },
+    {
+      "title": "Chiến dịch Google Ads",
+      "category": "Marketing",
+      "image": "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc3MjU4OTI0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Tăng 300% chuyển đổi sau 3 tháng"
+    },
+    {
+      "title": "Branding Startup",
+      "category": "Branding",
+      "image": "https://images.unsplash.com/photo-1666698809123-44e998e93f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdlYiUyMGRlc2lnbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzI1OTI2ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Xây dựng thương hiệu từ con số 0"
+    },
+    {
+      "title": "TikTok Marketing",
+      "category": "Social Media",
+      "image": "https://images.unsplash.com/photo-1640725804478-ebf80960a3f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMG1hcmtldGluZyUyMGNvbnRlbnR8ZW58MXx8fHwxNzcyNTU3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "10 triệu views trong 1 tháng"
+    }
+  ],
+  "processSteps": [
+    {
+      "number": 1,
+      "title": "Tư vấn & Báo giá",
+      "description": "Tư vấn chi tiết về những mong muốn và ý tưởng của khách hàng, đưa ra tính năng và gói dịch vụ phù hợp với ngân sách và lên báo giá chi tiết"
+    },
+    {
+      "number": 2,
+      "title": "Lập kế hoạch",
+      "description": "Sau khi tiếp nhận yêu cầu của khách hàng, bộ phận UI/UX và Dev sẽ thảo luận để đưa ra kế hoạch tối ưu nhất dành cho khách hàng"
+    },
+    {
+      "number": 3,
+      "title": "Tiếp nhận yêu cầu",
+      "description": "Sau khi tiếp nhận yêu cầu của khách hàng, bộ phận UI/UX và Dev sẽ thảo luận để đưa ra kế hoạch tối ưu nhất dành cho khách hàng"
+    },
+    {
+      "number": 4,
+      "title": "Thử nghiệm và điều chỉnh",
+      "description": "Khách hàng thử nghiệm website của họ sau khi lập trình và tiến hành điều chỉnh nếu có vấn đề phát sinh"
+    },
+    {
+      "number": 5,
+      "title": "Hướng dẫn quản trị",
+      "description": "Trao đổi và hướng dẫn khách hàng tự quản lí website của họ một các chuyên nghiệp và chính xác"
+    },
+    {
+      "number": 6,
+      "title": "Bàn giao & Bảo hành",
+      "description": "Sau khi hoàn thành các bước thử nghiệm và đào tạo, tiến hàng bàn giao và bảo hành cho khách trong những trường hợp cụ thể về kĩ thuật"
+    }
+  ],
+  "vision": {
+    "title": "Tầm nhìn & Sứ mệnh",
+    "image": "https://images.unsplash.com/photo-1758691736545-5c33b6255dca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwbWVldGluZyUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3NzI1OTczMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "vision": " “Một agency phản ứng nhanh với thị trường cũng như các nền tảng kỹ thuật số” đó là tầm nhìn mà CCMARTECH hướng tới, trở thành một mục tiêu cốt lõi cho doanh nghiệp tiếp tục phát triển trong tương lai. Là một agency marketing, CCMARTECH luôn tập trung vào việc nắm bắt xu hướng thị trường và xu hướng kinh doanh để phát triển các chiến lược marketing hiệu quả.",
+    "mission": "Sứ mệnh của CCMARTECH là cung cấp giải pháp website và marketing tối ưu, giúp doanh nghiệp tiếp cận khách hàng hiệu quả. CCMARTECH cam kết đồng hành cùng doanh nghiệp xây dựng thương hiệu và phát triển bền vững."
+  }
+}

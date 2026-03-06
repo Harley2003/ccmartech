@@ -1,0 +1,32 @@
+{
+  "companyName": "CCMARTECH",
+  "tagline": "Marketing Solutions",
+  "description": "Giải pháp thiết kế, sáng tạo – chất lượng – hiệu quả, dành riêng cho doanh nghiệp.",
+  "url": "https://ccmartech.vn",
+  "contact": {
+    "hotline": "0923 250 327",
+    "email": "contact.ccmartech@gmail.com",
+    "address": "253 Thụy Khuê, Tây Hồ, Hà Nội"
+  },
+  "workingHours": ["Thứ 2 - Thứ 6: 9:00 - 18:00"],
+  "branches": [
+    {
+      "name": "Chi nhánh 1",
+      "address": "253 Thụy Khuê, Tây Hồ, Hà Nội",
+      "phone": "0923 250 327"
+    },
+    {
+      "name": "Chi nhánh 2",
+      "address": "Cầu Giấy, Hà Nội",
+      "phone": "0923 250 328"
+    },
+    {
+      "name": "Chi nhánh 3",
+      "address": "Hoàn Kiếm, Hà Nội",
+      "phone": "0923 250 329"
+    }
+  ],
+  "social": { "facebook": "#", "linkedin": "#", "youtube": "#" },
+  "copyright": "© 2020-2026 CCMARTECH. All rights reserved.",
+  "stats": { "clients": "500+", "projects": "200+", "experience": "8+" }
+}

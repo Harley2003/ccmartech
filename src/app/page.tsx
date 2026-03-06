@@ -1,103 +1,256 @@
-import Image from "next/image";
+﻿"use client";
 
-export default function Home() {
+import { motion } from "motion/react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  CheckCircle,
+  Code2,
+  Megaphone,
+  Smartphone,
+  Palette,
+  Zap,
+  Share2,
+  ChevronRight
+} from "lucide-react";
+import Hero from "@/components/sections/Hero";
+import AboutSection from "@/components/sections/AboutSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
+import VisionMission from "@/components/sections/VisionMission";
+import PartnersSection from "@/components/sections/PartnersSection";
+import ProcessSection from "@/components/sections/ProcessSection";
+import NewsBentoSection from "@/components/sections/NewsBentoSection";
+import siteData from "@/data/site.json";
+
+/* ── Capabilities marquee items ── */
+const capabilities = [
+  "Sáng tạo",
+  "Bứt phá",
+  "Dẫn đầu xu hướng",
+  "Google Ads",
+  "Facebook Ads",
+  "TikTok Ads",
+  "Thiết kế Website",
+  "SEO Content",
+  "Branding"
+];
+const marqueeItems = [
+  ...capabilities.map((t, i) => ({ text: t, id: `a${i}` })),
+  ...capabilities.map((t, i) => ({ text: t, id: `b${i}` }))
+];
+
+/* ── Service cards with images ── */
+const services = [
+  {
+    num: "01",
+    icon: Code2,
+    title: "Thiết kế Website",
+    desc: "Website đẹp, chuẩn SEO, tốc độ nhanh, bảo mật cao. UI/UX tối ưu chuyển đổi.",
+    link: "/dich-vu/thiet-ke-website",
+    image:
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=75"
+  },
+  {
+    num: "02",
+    icon: Megaphone,
+    title: "Google Ads",
+    desc: "Chiến dịch Google hiệu quả, tối ưu chi phí, tăng chuyển đổi.",
+    link: "/dich-vu/google-ads",
+    image:
+      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=75"
+  },
+  {
+    num: "03",
+    icon: Smartphone,
+    title: "TikTok Ads",
+    desc: "Quảng cáo TikTok sáng tạo, tiếp cận Gen Z, viral nhanh.",
+    link: "/dich-vu/tiktok-ads",
+    image:
+      "https://images.unsplash.com/photo-1640725804478-ebf80960a3f4?auto=format&fit=crop&w=600&q=75"
+  },
+  {
+    num: "04",
+    icon: Share2,
+    title: "Facebook Ads",
+    desc: "Targeting chính xác, ROI cao, campaign đa mục tiêu.",
+    link: "/dich-vu/facebook-ads",
+    image:
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=75"
+  },
+  {
+    num: "05",
+    icon: Palette,
+    title: "Branding",
+    desc: "Xây dựng thương hiệu mạnh mẽ, nhận diện độc đáo.",
+    link: "/dich-vu/branding",
+    image:
+      "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=600&q=75"
+  },
+  {
+    num: "06",
+    icon: Zap,
+    title: "Tự động hóa",
+    desc: "Workflow thông minh, tiết kiệm thời gian, nhân đôi hiệu quả.",
+    link: "/dich-vu/tu-dong-hoa",
+    image:
+      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=600&q=75"
+  }
+];
+
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="overflow-x-hidden">
+      <Hero />
+      <div className="bg-brand-blue py-3.5 overflow-hidden">
+        <div className="flex items-center">
+          <div className="animate-marquee flex items-center gap-0 whitespace-nowrap">
+            {marqueeItems.map((item) => (
+              <span
+                key={item.id}
+                className="inline-flex items-center gap-5 px-5"
+              >
+                <span className="text-white font-medium tracking-wide text-sm">
+                  {item.text}
+                </span>
+                <span className="text-white/30 text-base">✦</span>
+              </span>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <AboutSection />
+      <section className="py-24 bg-[#F1F2F4]">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14"
+          >
+            <div>
+              <span className="text-brand-blue text-sm font-semibold uppercase tracking-widest block mb-3">
+                Dịch vụ &amp; Giải pháp
+              </span>
+              <h2
+                className="font-black text-heading-dark leading-tight"
+                style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
+              >
+                Giải pháp toàn diện cho{" "}
+                <span className="gradient-text">doanh nghiệp</span>
+              </h2>
+            </div>
+            <Link
+              href="/dich-vu"
+              className="inline-flex items-center gap-2 text-brand-blue font-medium text-sm hover:gap-3 transition-all duration-300 shrink-0"
+            >
+              Xem tất cả dịch vụ <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <motion.div
+                  key={s.num}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.07 }}
+                >
+                  <Link
+                    href={s.link}
+                    className="group flex flex-col h-full rounded-2xl bg-white border border-gray-100 hover:shadow-xl hover:shadow-brand-blue/10 hover:-translate-y-1 transition-all duration-400 overflow-hidden"
+                  >
+                    <div className="relative h-44 overflow-hidden">
+                      <img
+                        src={s.image}
+                        alt={s.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="w-12 h-12 rounded-full border-2 border-white/70 flex items-center justify-center">
+                          <ArrowRight className="w-5 h-5 text-white" />
+                        </div>
+                      </div>
+                      <span className="absolute top-3 left-3 text-[11px] font-bold text-white/80 bg-black/30 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                        {s.num}
+                      </span>
+                    </div>
+                    <div className="flex flex-col flex-1 p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-9 h-9 rounded-lg bg-brand-blue/8 flex items-center justify-center group-hover:bg-brand-blue/14 transition-colors">
+                          <Icon className="w-4 h-4 text-brand-blue" />
+                        </div>
+                        <h3 className="text-base font-bold text-heading-dark">
+                          {s.title}
+                        </h3>
+                      </div>
+                      <p className="text-body-text text-sm leading-relaxed flex-1">
+                        {s.desc}
+                      </p>
+                      <div className="inline-flex items-center gap-1 text-brand-blue text-sm font-medium mt-4 group-hover:gap-2 transition-all duration-300">
+                        Tìm hiểu thêm <ChevronRight className="w-3.5 h-3.5" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <PortfolioSection />
+      <VisionMission />
+      <PartnersSection />
+      <ProcessSection />
+      <NewsBentoSection />
+      <section className="py-28 bg-brand-blue relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-125 bg-white/5 rounded-full blur-[130px] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-white/80 text-sm font-medium mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />{" "}
+              Sẵn sàng hợp tác
+            </span>
+            <h2
+              className="font-black text-white mb-6 leading-tight tracking-tight"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)" }}
+            >
+              Sẵn sàng tăng trưởng{" "}
+              <span className="text-white underline decoration-white/30">
+                đột phá?
+              </span>
+            </h2>
+            <p className="text-white/70 text-lg mb-10 leading-relaxed">
+              Liên hệ với chúng tôi ngay hôm nay để nhận tư vấn miễn phí và
+              proposal chi tiết cho dự án của bạn.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/lien-he"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-brand-blue rounded-xl font-bold text-sm hover:bg-[#F1F2F4] transition-all duration-300 hover:scale-[1.02] shadow-lg"
+              >
+                <CheckCircle className="w-4 h-4" />
+                Đăng ký tư vấn miễn phí
+              </Link>
+              <a
+                href={`tel:${siteData.contact.hotline.replaceAll(" ", "")}`}
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white rounded-xl font-medium text-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+              >
+                Gọi ngay: {siteData.contact.hotline}
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
