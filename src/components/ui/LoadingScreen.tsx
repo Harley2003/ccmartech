@@ -42,7 +42,6 @@ export default function LoadingScreen() {
             transition={{ duration: 0.6, ease: [0.34, 1.2, 0.64, 1] }}
             className="relative z-10 flex items-center justify-center"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <Image
               src="/loading-ccmartech.gif"
               alt="Đang tải CCMARTECH…"

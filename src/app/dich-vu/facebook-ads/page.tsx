@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { CheckCircle2, ChevronDown, Target, Users, DollarSign, Activity, MessageSquare, TrendingUp, Share2, Bot } from "lucide-react";
 import Footer from "@/components/layout/Footer";
 
@@ -492,10 +493,11 @@ export default function FacebookAdsPage() {
                 >
                   {/* Top: Image */}
                   <div className="h-64 relative overflow-hidden">
-                    <img
+                    <Image
                       src={benefit.image}
                       alt={benefit.title}
-                      className="w-full h-full object-cover object-center"
+                      fill
+                      className="object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                   </div>

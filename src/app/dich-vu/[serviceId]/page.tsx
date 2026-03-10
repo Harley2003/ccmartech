@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { motion } from "motion/react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowLeft,
   ArrowRight,
@@ -159,10 +160,12 @@ export default function ServiceDetailPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <img
+              <Image
                 src={service.image}
                 alt={service.title}
-                className="rounded-2xl shadow-2xl w-full h-115 object-cover"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
               {/* Floating trust badge */}
               <div className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-xl p-4 flex items-center gap-3 border border-gray-100">

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { CheckCircle2, Star, Target, DollarSign, TrendingUp, BarChart3, Lightbulb, Users, FileText, Headphones } from "lucide-react";
 
 // ==================== DATA CONSTANTS ====================
@@ -478,10 +479,11 @@ export default function GoogleAdsPage() {
                 >
                   {/* Top Half: Image */}
                   <div className="h-64 relative overflow-hidden">
-                    <img
+                    <Image
                       src={card.image}
                       alt={card.title}
-                      className="w-full h-full object-cover object-center"
+                      fill
+                      className="object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                   </div>

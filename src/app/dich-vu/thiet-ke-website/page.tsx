@@ -817,11 +817,12 @@ export default function ThietKeWebsitePage() {
                   cls: "h-44 w-full object-cover mt-4"
                 }
               ].map((img) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <Image
                   key={img.alt}
                   src={img.src}
                   alt={img.alt}
+                  width={480}
+                  height={320}
                   className={`rounded-2xl ${img.cls}`}
                 />
               ))}

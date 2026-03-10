@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import {
   Zap,
   ArrowRight,
-  CheckCircle2,
   Target,
   TrendingUp,
   MessageSquare,
@@ -19,11 +18,9 @@ import {
   Clock,
   Share2,
   Users,
-  ArrowLeft,
   Rocket,
   Activity,
   Gauge,
-  Cpu,
 } from "lucide-react";
 import Link from "next/link";
 

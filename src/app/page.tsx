@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle,
@@ -41,7 +42,7 @@ const marqueeItems = [
 ];
 
 /* ── Icon mapping ── */
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code: Code2,
   Megaphone,
   Smartphone,
@@ -117,10 +118,11 @@ export default function HomePage() {
                     className="group flex flex-col h-full rounded-2xl bg-white border border-gray-100 hover:shadow-xl hover:shadow-brand-blue/10 hover:-translate-y-1 transition-all duration-400 overflow-hidden"
                   >
                     <div className="relative h-44 overflow-hidden">
-                      <img
+                      <Image
                         src={s.image}
                         alt={s.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Calendar, Clock, Tag, User } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Tag, User } from "lucide-react";
 import NewsCard from "@/components/sections/NewsCard";
 import newsData from "@/data/news.json";
 
@@ -50,12 +50,6 @@ export default function BlogDetailPage() {
   const allRelated = [...relatedArticles, ...moreRelated].slice(0, 3);
 
   const catColor = categoryColors[article.categoryId] ?? "bg-brand-blue/10 text-brand-blue";
-  const initials = article.author
-    .split(" ")
-    .map((w) => w[0])
-    .slice(-2)
-    .join("")
-    .toUpperCase();
 
   return (
     <div className="overflow-hidden">

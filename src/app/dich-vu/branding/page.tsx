@@ -6,10 +6,8 @@ import {
   Palette,
   ArrowRight,
   CheckCircle2,
-  Sparkles,
   Target,
   TrendingUp,
-  Users,
   Eye,
   Heart,
   Lightbulb,
@@ -17,8 +15,6 @@ import {
   BookOpen,
   Award,
   FileText,
-  Zap,
-  ArrowLeft,
 } from "lucide-react";
 import Link from "next/link";
 

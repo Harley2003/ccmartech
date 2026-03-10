@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   ArrowRight, CheckCircle, Users, Share2, Star, Handshake,
@@ -392,10 +393,11 @@ export default function TikTokAdsPage() {
               >
                 {/* Top Half: Image */}
                 <div className="h-64 relative overflow-hidden">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover object-center"
+                    fill
+                    className="object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                 </div>
@@ -436,10 +438,11 @@ export default function TikTokAdsPage() {
               >
                 {/* Top: Image */}
                 <div className="h-56 relative overflow-hidden">
-                  <img
+                  <Image
                     src={cat.image}
                     alt={cat.title}
-                    className="w-full h-full object-cover object-center"
+                    fill
+                    className="object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                 </div>

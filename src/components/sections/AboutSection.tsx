@@ -210,7 +210,7 @@ export default function AboutSection() {
             {/* ── Abstract decorations AROUND the video frame ── */}
 
             {/* Soft glow blobs */}
-            {ORBS.map((orb, i) => (
+            {ORBS.map((orb) => (
               <motion.div
                 key={`orb-${orb.color}-${orb.size}`}
                 className="absolute rounded-full pointer-events-none"

@@ -1,15 +1,14 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Search, ArrowRight, Calendar, Clock, Sparkles } from "lucide-react";
-import NewsCard from "@/components/sections/NewsCard";
 import newsData from "@/data/news.json";
 
 // Abstract floating shapes
-const FloatingShape = ({ delay = 0, duration = 20, size = 200, opacity = 0.1 }: any) => (
+const FloatingShape = ({ delay = 0, duration = 20, size = 200, opacity = 0.1 }: { delay?: number; duration?: number; size?: number; opacity?: number }) => (
   <motion.div
     className="absolute rounded-full blur-3xl"
     style={{
@@ -36,9 +35,6 @@ export default function TinTucPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
-  const { scrollYProgress } = useScroll();
-  const morphPath = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -756,7 +752,7 @@ export default function TinTucPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.7 }}
             >
-              // Không spam. Hủy đăng ký bất kỳ lúc nào.
+              {/* Không spam. Hủy đăng ký bất kỳ lúc nào. */}
             </motion.p>
           </motion.div>
         </div>

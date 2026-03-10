@@ -153,7 +153,7 @@ export default function LienHePage() {
               className="text-center mb-12"
             >
               <span className="inline-block px-4 py-2 bg-[#F1F2F4] rounded-full text-[#003FBB] text-sm font-bold mb-4" style={{ fontFamily: "Space Mono, monospace" }}>
-                // Đăng ký tư vấn
+                {/* Đăng ký tư vấn */}
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-[#444547] mb-4">
                 Gửi thông tin của bạn
@@ -182,7 +182,7 @@ export default function LienHePage() {
               transition={{ delay: 0.4 }}
               className="text-center text-sm text-[#676767] mt-6 font-mono"
             >
-              // Thông tin của bạn được bảo mật tuyệt đối
+              {/* Thông tin của bạn được bảo mật tuyệt đối */}
             </motion.p>
           </div>
         </div>
