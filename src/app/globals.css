@@ -243,3 +243,56 @@ body {
 .group:hover .group-hover\:scale-108 {
   transform: scale(1.08);
 }
+
+/* ========================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Disable heavy animations on mobile */
+  .animate-marquee,
+  .animate-partners-ltr,
+  .animate-partners-rtl {
+    animation-duration: 40s; /* Slower = less GPU usage */
+  }
+
+  /* Reduce blur effects */
+  [class*="blur-"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Optimize transforms */
+  .bento-card:hover {
+    transform: none;
+  }
+
+  /* Remove expensive hover effects */
+  .group:hover .group-hover\:scale-108,
+  .group:hover .group-hover\:scale-105 {
+    transform: none;
+  }
+}
+
+/* GPU acceleration for animations */
+.animate-marquee,
+.animate-partners-ltr,
+.animate-partners-rtl,
+[class*="motion-"] {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
