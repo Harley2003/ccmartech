@@ -47,21 +47,25 @@ const VALUE_PROPS = [
     icon: Lightbulb,
     title: "Đội ngũ giàu kinh nghiệm",
     desc: "CCMartech có đội ngũ giàu chuyên môn và am hiểu sâu về nền tảng TikTok, giúp bạn xây dựng chiến dịch tối ưu và hiệu quả nhất.",
+    image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&h=600&fit=crop",
   },
   {
     icon: Sparkles,
     title: "Chiến lược sáng tạo và tùy chỉnh",
     desc: "CCMartech không chỉ triển khai quảng cáo mà còn thiết kế nội dung sáng tạo, bắt trend, phù hợp với đối tượng mục tiêu, đảm bảo sự tương tác cao và tiếp cận mạnh mẽ.",
+    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop",
   },
   {
     icon: BarChart3,
     title: "Chiến lược tối ưu - chuyên sâu",
     desc: "CCMartech theo dõi sát sao, phân tích dữ liệu và điều chỉnh chiến lược trong suốt quá trình chạy quảng cáo để đảm bảo đạt hiệu quả tối đa và tối ưu hóa chi phí.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
   },
   {
     icon: TrendingUp,
     title: "Minh chứng thành công",
     desc: "Nhiều chiến dịch thành công với kết quả vượt trội đã giúp CCMartech khẳng định vị thế là đối tác quảng cáo tin cậy trên TikTok.",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop",
   },
 ];
 
@@ -70,16 +74,19 @@ const SERVICE_CATEGORIES = [
     icon: Target,
     title: "Phân tích và nghiên cứu thị trường",
     desc: "CCMartech đảm bảo chiến dịch được xây dựng dựa trên hiểu biết sâu sắc về thị trường và đối tượng mục tiêu, giúp chiến dịch tiếp cận chính xác khách hàng tiềm năng.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
   },
   {
     icon: Video,
     title: "Sáng tạo nội dung video",
     desc: "CCMartech thiết kế và sản xuất các video độc đáo, thu hút, bắt kịp xu hướng TikTok, tạo ra nội dung nổi bật và hấp dẫn người xem.",
+    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop",
   },
   {
     icon: TrendingUp,
     title: "Triển khai và tối ưu hóa chiến dịch",
     desc: "CCMartech triển khai chiến dịch quảng cáo chuyên nghiệp và liên tục theo dõi, điều chỉnh để tối ưu hiệu quả, giúp chiến dịch đạt được kết quả tốt nhất.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
   },
 ];
 
@@ -381,19 +388,23 @@ export default function TikTokAdsPage() {
                 key={item.title}
                 initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.1 }}
-                className="group relative rounded-3xl p-10 border border-gray-100 hover:shadow-2xl transition-all duration-300"
-                style={{ background: "linear-gradient(150deg, #FAFAFA 0%, #F0F4F8 100%)" }}
+                className="group relative rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300"
               >
-                {/* Accent bar */}
-                <div className="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style={{ background: "linear-gradient(90deg, #00F2EA, #EE1D52)" }} />
-
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-                  style={{ background: "linear-gradient(135deg, #00F2EA, #003FBB)" }}
-                >
-                  <item.icon className="w-8 h-8 text-white" />
+                {/* Top Half: Image */}
+                <div className="h-64 relative overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                 </div>
-                <h3 className="text-xl font-bold text-heading-dark mb-4">{item.title}</h3>
-                <p className="text-body-text leading-relaxed">{item.desc}</p>
+
+                {/* Bottom Half: Content */}
+                <div className="p-8 bg-white">
+                  <h3 className="text-xl font-bold text-heading-dark mb-4">{item.title}</h3>
+                  <p className="text-body-text leading-relaxed">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -421,15 +432,23 @@ export default function TikTokAdsPage() {
                 key={cat.title}
                 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="group bg-white rounded-3xl p-10 shadow-sm hover:shadow-2xl transition-all duration-300"
+                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300"
               >
-                <div className="w-20 h-20 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                  style={{ background: "linear-gradient(135deg, #1B3D80, #00F2EA)" }}
-                >
-                  <cat.icon className="w-10 h-10 text-white" />
+                {/* Top: Image */}
+                <div className="h-56 relative overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                 </div>
-                <h3 className="text-xl font-bold text-heading-dark mb-4 text-center">{cat.title}</h3>
-                <p className="text-body-text leading-relaxed text-center">{cat.desc}</p>
+
+                {/* Bottom: Content */}
+                <div className="p-8">
+                  <h3 className="text-xl font-bold text-heading-dark mb-4 text-center">{cat.title}</h3>
+                  <p className="text-body-text leading-relaxed text-center">{cat.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>

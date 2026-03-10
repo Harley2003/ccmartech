@@ -13,6 +13,7 @@ import {
   Smartphone,
   Palette,
   Zap,
+  Sparkles,
 } from "lucide-react";
 import servicesData from "@/data/services.json";
 import ServiceCard from "@/components/sections/ServiceCard";
@@ -25,6 +26,7 @@ const iconMap: Record<string, LucideIcon> = {
   Smartphone,
   Palette,
   Zap,
+  Sparkles,
 };
 
 export default function ServiceDetailPage() {

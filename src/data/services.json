@@ -18,7 +18,7 @@
         { "step": "04", "title": "Bàn giao & Hỗ trợ", "desc": "Bàn giao toàn bộ source code, hướng dẫn quản trị và hỗ trợ kỹ thuật sau bàn giao" }
       ],
       "gradient": "from-blue-500 to-cyan-500",
-      "image": "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGV2ZWxvcG1lbnQlMjBjb2Rpbmd8ZW58MXx8fHwxNzcyNTUzNTA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/assest/services/website.jpg"
     },
     {
       "id": "google-ads",
@@ -36,7 +36,7 @@
         { "step": "04", "title": "Báo cáo & Scale", "desc": "Báo cáo kết quả định kỳ, tư vấn mở rộng ngân sách và chiến lược tăng trưởng" }
       ],
       "gradient": "from-green-500 to-emerald-500",
-      "image": "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc3MjU4OTI0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/assest/services/google-ads.jpg"
     },
     {
       "id": "tiktok-ads",
@@ -54,7 +54,7 @@
         { "step": "04", "title": "Tối ưu & Scale", "desc": "Phân tích hook rate, watch rate, tối ưu creative và nhân rộng chiến dịch hiệu quả" }
       ],
       "gradient": "from-purple-500 to-pink-500",
-      "image": "https://images.unsplash.com/photo-1640725804478-ebf80960a3f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMG1hcmtldGluZyUyMGNvbnRlbnR8ZW58MXx8fHwxNzcyNTU3OTU4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/assest/services/tiktok-ads.jpg"
     },
     {
       "id": "facebook-ads",
@@ -72,7 +72,7 @@
         { "step": "04", "title": "Scale & Remarketing", "desc": "Mở rộng ngân sách chiến dịch hiệu quả, xây dựng phễu remarketing đa tầng" }
       ],
       "gradient": "from-blue-600 to-indigo-600",
-      "image": "https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzI1NDAzOTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/assest/services/facebook-ads.jpg"
     },
     {
       "id": "branding",
@@ -90,7 +90,7 @@
         { "step": "04", "title": "Brand Guideline", "desc": "Hoàn thiện brand book, hướng dẫn ứng dụng và hỗ trợ triển khai trên tất cả kênh" }
       ],
       "gradient": "from-orange-500 to-red-500",
-      "image": "https://images.unsplash.com/photo-1666698809123-44e998e93f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdlYiUyMGRlc2lnbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzI1OTI2ODB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/assest/services/brand.jpg"
     },
     {
       "id": "tu-dong-hoa",
@@ -108,7 +108,25 @@
         { "step": "04", "title": "Đào tạo & Vận hành", "desc": "Đào tạo đội ngũ sử dụng, theo dõi hiệu suất và tối ưu liên tục các automation workflow" }
       ],
       "gradient": "from-yellow-500 to-amber-500",
-      "image": "https://images.unsplash.com/photo-1505209487757-5114235191e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjB3b3Jrc3BhY2UlMjBtaW5pbWFsJTIwZGVza3xlbnwxfHx8fDE3NzI1OTczMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/assest/services/marketing-automation.jpg"
+    },
+    {
+      "id": "branding-marketing-automation",
+      "icon": "Sparkles",
+      "category": "premium",
+      "title": "Branding × Marketing Automation",
+      "shortDesc": "Thương hiệu mạnh mẽ, tăng trưởng tự động",
+      "description": "Giải pháp tích hợp toàn diện: Xây dựng bản sắc thương hiệu độc đáo kết hợp công nghệ tự động hóa marketing, mang lại trải nghiệm khách hàng nhất quán và tăng trưởng bền vững.",
+      "features": ["Branding Strategy & Identity", "Logo & Visual System", "Marketing Automation Tools", "Email & Chatbot AI", "CRM Integration", "Analytics Dashboard"],
+      "stats": [{ "value": "80+", "label": "Thương hiệu đã xây dựng" }, { "value": "150%", "label": "ROI trung bình" }],
+      "process": [
+        { "step": "01", "title": "Discovery & Research", "desc": "Nghiên cứu thị trường, phân tích insight và audit quy trình marketing hiện tại" },
+        { "step": "02", "title": "Strategy & Planning", "desc": "Xây dựng brand positioning và thiết kế customer journey automation" },
+        { "step": "03", "title": "Design & Development", "desc": "Thiết kế visual identity và tích hợp automation tools" },
+        { "step": "04", "title": "Launch & Optimize", "desc": "Bàn giao brand guideline và training team sử dụng automation" }
+      ],
+      "gradient": "from-blue-600 via-purple-600 to-cyan-600",
+      "image": "/assest/services/branding-automation.jpg"
     }
   ]
 }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 
 export default function LoadingScreen() {
   const [visible, setVisible] = useState(true);
@@ -42,12 +43,12 @@ export default function LoadingScreen() {
             className="relative z-10 flex items-center justify-center"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/loading-ccmartech.gif"
               alt="Đang tải CCMARTECH…"
               width={420}
               height={420}
-              className="object-contain mix-blend-multiply w-[420px] max-w-[80vw]"
+              className="object-contain w-105 max-w-[80vw] brightness-105 contrast-[1.08]"
               draggable={false}
             />
           </motion.div>

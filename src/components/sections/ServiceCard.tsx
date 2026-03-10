@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Code, Megaphone, Target, Smartphone, Palette, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, Code, Megaphone, Target, Smartphone, Palette, Zap, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -12,6 +12,7 @@ const iconMap: Record<string, LucideIcon> = {
   Smartphone,
   Palette,
   Zap,
+  Sparkles,
 };
 
 interface ServiceCardProps {

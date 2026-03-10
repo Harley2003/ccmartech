@@ -89,21 +89,25 @@ const BENEFITS_ITEMS = [
     icon: Target,
     title: "Tiếp cận đúng đối tượng mục tiêu",
     description: "Facebook Ads cho phép doanh nghiệp nhắm mục tiêu theo độ tuổi, giới tính, vị trí địa lý, sở thích và hành vi, giúp tối ưu hóa hiệu quả quảng cáo.",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=600&fit=crop",
   },
   {
     icon: Users,
     title: "Tăng tương tác và nhận diện",
     description: "Quảng cáo trên Facebook giúp doanh nghiệp xây dựng hình ảnh thương hiệu và duy trì sự hiện diện trong tâm trí khách hàng thông qua nội dung thu hút và đa dạng.",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
   },
   {
     icon: DollarSign,
     title: "Chi phí linh hoạt và hiệu quả",
     description: "Facebook Ads cho phép bạn kiểm soát chi phí quảng cáo bằng cách thiết lập ngân sách phù hợp, chỉ trả tiền cho những hành động cụ thể như lượt nhấp chuột, lượt xem hoặc lượt chuyển đổi.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
   },
   {
     icon: Activity,
     title: "Công cụ đo lường mạnh mẽ",
     description: "Facebook cung cấp các công cụ phân tích chi tiết để bạn theo dõi hiệu suất chiến dịch, điều chỉnh kịp thời và tối ưu hóa lợi nhuận.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
   },
 ];
 
@@ -131,12 +135,14 @@ const NETWORK_LINES = [
 // ==================== MAIN COMPONENT ====================
 
 export default function FacebookAdsPage() {
-  const [openAccordion, setOpenAccordion] = useState<number>(1);
+  const [openAccordion, setOpenAccordion] = useState<number[]>([1]);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", company: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleAccordionToggle = (id: number) => {
-    setOpenAccordion(openAccordion === id ? 0 : id);
+    setOpenAccordion(prev => 
+      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
+    );
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -379,7 +385,7 @@ export default function FacebookAdsPage() {
                 >
                   <span className="text-xl font-bold text-[#444547]">{type.title}</span>
                   <motion.div
-                    animate={{ rotate: openAccordion === type.id ? 180 : 0 }}
+                    animate={{ rotate: openAccordion.includes(type.id) ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
                     <ChevronDown className="w-6 h-6 text-[#003FBB]" />
@@ -389,8 +395,8 @@ export default function FacebookAdsPage() {
                 <motion.div
                   initial={false}
                   animate={{
-                    height: openAccordion === type.id ? "auto" : 0,
-                    opacity: openAccordion === type.id ? 1 : 0,
+                    height: openAccordion.includes(type.id) ? "auto" : 0,
+                    opacity: openAccordion.includes(type.id) ? 1 : 0,
                   }}
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
@@ -475,21 +481,30 @@ export default function FacebookAdsPage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {BENEFITS_ITEMS.map((benefit, index) => {
-              const IconComponent = benefit.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1877F2] to-[#003FBB] flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  {/* Top: Image */}
+                  <div className="h-64 relative overflow-hidden">
+                    <img
+                      src={benefit.image}
+                      alt={benefit.title}
+                      className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#444547] mb-4">{benefit.title}</h3>
-                  <p className="text-[#676767] leading-relaxed">{benefit.description}</p>
+
+                  {/* Bottom: Content */}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-[#444547] mb-4">{benefit.title}</h3>
+                    <p className="text-[#676767] leading-relaxed">{benefit.description}</p>
+                  </div>
                 </motion.div>
               );
             })}

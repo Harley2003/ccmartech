@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import siteData from "@/data/site.json";
 import chatbotConfig from "@/data/chatbot.json";
+import Image from "next/image";
 
 interface Message {
   id: number;
@@ -37,8 +38,8 @@ const INITIAL_MESSAGES: Message[] = [
     id: 1,
     role: "bot",
     text: chatbotConfig.welcomeMessage,
-    time: "",
-  },
+    time: ""
+  }
 ];
 
 const QUICK_REPLIES = chatbotConfig.quickReplies;
@@ -220,7 +221,7 @@ export default function ChatWidget() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.85, y: 20 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="fixed bottom-24 right-4 md:right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-border"
+            className="fixed bottom-40 right-4 md:right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-border"
             style={{ height: "520px" }}
           >
             {/* Header */}
@@ -384,7 +385,7 @@ export default function ChatWidget() {
         onClick={() => setIsOpen((v) => !v)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-5 right-4 md:right-6 z-50 w-14 h-14 bg-cta-gradient rounded-full shadow-lg flex items-center justify-center text-white"
+        className="fixed bottom-24 right-4 md:right-6 z-50 w-14 h-14 bg-cta-gradient rounded-full shadow-lg flex items-center justify-center text-white"
         aria-label="Mở chat hỗ trợ"
       >
         <AnimatePresence mode="wait">
@@ -416,6 +417,25 @@ export default function ChatWidget() {
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white" />
         )}
       </motion.button>
+
+      {/* Zalo Button */}
+      <motion.a
+        href="https://zalo.me/0923250327"
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-5 right-4 md:right-6 z-50"
+        aria-label="Liên hệ qua Zalo"
+      >
+        <Image
+          src="/zalo.svg"
+          alt="Zalo"
+          className="w-16 h-16"
+          width={64}
+          height={64}
+        />
+      </motion.a>
     </>
   );
 }

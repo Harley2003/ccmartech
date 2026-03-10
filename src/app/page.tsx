@@ -10,8 +10,8 @@ import {
   Smartphone,
   Palette,
   Zap,
-  Share2,
-  ChevronRight
+  ChevronRight,
+  Target
 } from "lucide-react";
 import Hero from "@/components/sections/Hero";
 import AboutSection from "@/components/sections/AboutSection";
@@ -21,6 +21,7 @@ import PartnersSection from "@/components/sections/PartnersSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import NewsBentoSection from "@/components/sections/NewsBentoSection";
 import siteData from "@/data/site.json";
+import servicesData from "@/data/services.json";
 
 /* ── Capabilities marquee items ── */
 const capabilities = [
@@ -39,63 +40,15 @@ const marqueeItems = [
   ...capabilities.map((t, i) => ({ text: t, id: `b${i}` }))
 ];
 
-/* ── Service cards with images ── */
-const services = [
-  {
-    num: "01",
-    icon: Code2,
-    title: "Thiết kế Website",
-    desc: "Website đẹp, chuẩn SEO, tốc độ nhanh, bảo mật cao. UI/UX tối ưu chuyển đổi.",
-    link: "/dich-vu/thiet-ke-website",
-    image:
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=75"
-  },
-  {
-    num: "02",
-    icon: Megaphone,
-    title: "Google Ads",
-    desc: "Chiến dịch Google hiệu quả, tối ưu chi phí, tăng chuyển đổi.",
-    link: "/dich-vu/google-ads",
-    image:
-      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=75"
-  },
-  {
-    num: "03",
-    icon: Smartphone,
-    title: "TikTok Ads",
-    desc: "Quảng cáo TikTok sáng tạo, tiếp cận Gen Z, viral nhanh.",
-    link: "/dich-vu/tiktok-ads",
-    image:
-      "https://images.unsplash.com/photo-1640725804478-ebf80960a3f4?auto=format&fit=crop&w=600&q=75"
-  },
-  {
-    num: "04",
-    icon: Share2,
-    title: "Facebook Ads",
-    desc: "Targeting chính xác, ROI cao, campaign đa mục tiêu.",
-    link: "/dich-vu/facebook-ads",
-    image:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=75"
-  },
-  {
-    num: "05",
-    icon: Palette,
-    title: "Branding",
-    desc: "Xây dựng thương hiệu mạnh mẽ, nhận diện độc đáo.",
-    link: "/dich-vu/branding",
-    image:
-      "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=600&q=75"
-  },
-  {
-    num: "06",
-    icon: Zap,
-    title: "Tự động hóa",
-    desc: "Workflow thông minh, tiết kiệm thời gian, nhân đôi hiệu quả.",
-    link: "/dich-vu/tu-dong-hoa",
-    image:
-      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=600&q=75"
-  }
-];
+/* ── Icon mapping ── */
+const iconMap: Record<string, any> = {
+  Code: Code2,
+  Megaphone,
+  Smartphone,
+  Target,
+  Palette,
+  Zap
+};
 
 export default function HomePage() {
   return (
@@ -148,18 +101,19 @@ export default function HomePage() {
             </Link>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => {
-              const Icon = s.icon;
+            {servicesData.services.map((s, i) => {
+              const Icon = iconMap[s.icon] || Code2;
+              const num = String(i + 1).padStart(2, "0");
               return (
                 <motion.div
-                  key={s.num}
+                  key={s.id}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.07 }}
                 >
                   <Link
-                    href={s.link}
+                    href={`/dich-vu/${s.id}`}
                     className="group flex flex-col h-full rounded-2xl bg-white border border-gray-100 hover:shadow-xl hover:shadow-brand-blue/10 hover:-translate-y-1 transition-all duration-400 overflow-hidden"
                   >
                     <div className="relative h-44 overflow-hidden">
@@ -175,7 +129,7 @@ export default function HomePage() {
                         </div>
                       </div>
                       <span className="absolute top-3 left-3 text-[11px] font-bold text-white/80 bg-black/30 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                        {s.num}
+                        {num}
                       </span>
                     </div>
                     <div className="flex flex-col flex-1 p-6">
@@ -188,7 +142,7 @@ export default function HomePage() {
                         </h3>
                       </div>
                       <p className="text-body-text text-sm leading-relaxed flex-1">
-                        {s.desc}
+                        {s.shortDesc}
                       </p>
                       <div className="inline-flex items-center gap-1 text-brand-blue text-sm font-medium mt-4 group-hover:gap-2 transition-all duration-300">
                         Tìm hiểu thêm <ChevronRight className="w-3.5 h-3.5" />

@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { CheckCircle2, Star, Target, DollarSign, TrendingUp, BarChart3, Lightbulb, Users, FileText, Headphones } from "lucide-react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 
 // ==================== DATA CONSTANTS ====================
 
@@ -72,21 +70,25 @@ const WHY_CHOOSE_CARDS = [
     icon: Lightbulb,
     title: "Chiến lược tối ưu - chuyên sâu",
     description: "CCMartech xây dựng chiến lược quảng cáo tùy chỉnh, phù hợp với từng ngành nghề và mục tiêu kinh doanh, đảm bảo chiến dịch tiếp cận đúng đối tượng và tăng tỷ lệ chuyển đổi.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
   },
   {
     icon: Users,
     title: "Đội ngũ giàu kinh nghiệm",
     description: "Đội ngũ chuyên viên của CCMartech có nhiều năm kinh nghiệm trong việc quản lý và tối ưu chiến dịch Google Ads, giúp bạn đạt được kết quả tốt nhất với chi phí hợp lý.",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
   },
   {
     icon: FileText,
     title: "Báo cáo chi tiết và minh bạch",
     description: "CCMartech cung cấp báo cáo đầy đủ, dễ hiểu về hiệu suất quảng cáo, giúp bạn nắm bắt tiến độ và điều chỉnh chiến lược kịp thời để tối đa hóa hiệu quả đầu tư.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
   },
   {
     icon: Headphones,
     title: "Hỗ trợ liên tục và tư vấn tận tâm",
     description: "Đội ngũ CCMartech luôn sẵn sàng hỗ trợ 24/7, tư vấn và giải đáp mọi thắc mắc trong suốt quá trình triển khai và vận hành chiến dịch quảng cáo.",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop",
   },
 ];
 
@@ -180,8 +182,6 @@ export default function GoogleAdsPage() {
 
   return (
     <div className="min-h-screen bg-[#F1F2F4]">
-      <Header />
-
       {/* ==================== HERO BANNER ==================== */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#000814] to-[#001840] text-white">
         {/* Abstract Animation Elements */}
@@ -467,7 +467,6 @@ export default function GoogleAdsPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {WHY_CHOOSE_CARDS.map((card) => {
-              const IconComponent = card.icon;
               return (
                 <motion.div
                   key={`card-${card.title.substring(0, 20)}`}
@@ -477,9 +476,14 @@ export default function GoogleAdsPage() {
                   whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
                   className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg transition-all duration-300"
                 >
-                  {/* Top Half: Icon */}
-                  <div className="h-56 bg-gradient-to-br from-[#003FBB] to-[#0067A1] flex items-center justify-center">
-                    <IconComponent className="w-24 h-24 text-white" strokeWidth={1.5} />
+                  {/* Top Half: Image */}
+                  <div className="h-64 relative overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                   </div>
 
                   {/* Bottom Half: Content */}
@@ -627,8 +631,6 @@ export default function GoogleAdsPage() {
           </motion.button>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

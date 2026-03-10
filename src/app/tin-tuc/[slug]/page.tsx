@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Calendar, Clock, Tag } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock, Tag, User } from "lucide-react";
 import NewsCard from "@/components/sections/NewsCard";
 import newsData from "@/data/news.json";
 
@@ -102,19 +102,14 @@ export default function BlogDetailPage() {
 
             <div className="flex flex-wrap items-center gap-4 text-white/80 text-sm">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white text-[10px] font-bold">
-                  {initials}
+                <div className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+                  <User className="w-4 h-4" />
                 </div>
                 <span>{article.author}</span>
               </div>
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" /> {article.date}
               </span>
-              {article.readTime && (
-                <span className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4" /> {article.readTime}
-                </span>
-              )}
             </div>
           </motion.div>
         </div>
@@ -181,8 +176,8 @@ export default function BlogDetailPage() {
               viewport={{ once: true }}
               className="mt-10 p-7 bg-page-bg rounded-2xl border border-gray-100 flex items-start gap-5"
             >
-              <div className="w-16 h-16 rounded-2xl bg-cta-gradient flex items-center justify-center text-white text-xl font-bold shrink-0 shadow-md">
-                {initials}
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-md" style={{ background: "linear-gradient(135deg, #1B3D80 0%, #0067A1 100%)" }}>
+                <User className="w-8 h-8" />
               </div>
               <div>
                 <div className="text-xs text-body-text mb-1">Tác giả</div>
