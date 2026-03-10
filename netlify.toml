@@ -1,16 +1,10 @@
-# Netlify Configuration
+# Netlify Configuration for Next.js
 [build]
   command = "npm run build"
-  publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
-  NPM_FLAGS = "--legacy-peer-deps"
 
 # Headers for security and performance
 [[headers]]
