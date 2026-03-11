@@ -109,24 +109,6 @@
       ],
       "gradient": "from-yellow-500 to-amber-500",
       "image": "/assest/services/marketing-automation.jpg"
-    },
-    {
-      "id": "branding-marketing-automation",
-      "icon": "Sparkles",
-      "category": "premium",
-      "title": "Branding × Marketing Automation",
-      "shortDesc": "Thương hiệu mạnh mẽ, tăng trưởng tự động",
-      "description": "Giải pháp tích hợp toàn diện: Xây dựng bản sắc thương hiệu độc đáo kết hợp công nghệ tự động hóa marketing, mang lại trải nghiệm khách hàng nhất quán và tăng trưởng bền vững.",
-      "features": ["Branding Strategy & Identity", "Logo & Visual System", "Marketing Automation Tools", "Email & Chatbot AI", "CRM Integration", "Analytics Dashboard"],
-      "stats": [{ "value": "80+", "label": "Thương hiệu đã xây dựng" }, { "value": "150%", "label": "ROI trung bình" }],
-      "process": [
-        { "step": "01", "title": "Discovery & Research", "desc": "Nghiên cứu thị trường, phân tích insight và audit quy trình marketing hiện tại" },
-        { "step": "02", "title": "Strategy & Planning", "desc": "Xây dựng brand positioning và thiết kế customer journey automation" },
-        { "step": "03", "title": "Design & Development", "desc": "Thiết kế visual identity và tích hợp automation tools" },
-        { "step": "04", "title": "Launch & Optimize", "desc": "Bàn giao brand guideline và training team sử dụng automation" }
-      ],
-      "gradient": "from-blue-600 via-purple-600 to-cyan-600",
-      "image": "/assest/services/branding-automation.jpg"
     }
   ]
 }
