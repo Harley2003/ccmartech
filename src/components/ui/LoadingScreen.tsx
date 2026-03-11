@@ -35,7 +35,6 @@ export default function LoadingScreen() {
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           className="fixed inset-0 z-[9999] flex items-center justify-center select-none bg-white overflow-hidden"
           style={{
-            minHeight: "100vh",
             minHeight: "100dvh", // Dynamic viewport height for mobile
             width: "100vw",
             position: "fixed",

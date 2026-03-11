@@ -20,14 +20,15 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "CCMartech - Giải pháp Marketing cho doanh nghiệp",
-  description: "CCMartech - Giải pháp Marketing cho doanh nghiệp",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-    viewportFit: "cover" // Important for iOS safe areas
-  }
+  description: "CCMartech - Giải pháp Marketing cho doanh nghiệp"
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: "cover" // Important for iOS safe areas
 };
 
 export default function RootLayout({
